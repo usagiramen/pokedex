@@ -1,0 +1,27 @@
+- key: visitors
+  description: >-
+    A person who visits the website or app. This include both logged-in
+    and non logged-in @users.
+  related:
+    - user
+
+- key: users
+  description: >-
+    A logged-in @visitor on the website or app, and perform some interactions
+    on the platform.
+  related:
+    - visitor
+
+- key: shoppers
+  description: >-
+    A @user who has successfully made a redirect (also known as @shopping_trip) to a merchant site.
+  related:
+    - user
+    - shopping_trip
+
+- key: shopping_trips
+  description: >-
+    Shopping trips are generated when a user interacts on a content in the app
+    or website such as a banner in the homescreen, and has been brought over to
+    the merchant's own site to continue their shopping.
+  test: asd

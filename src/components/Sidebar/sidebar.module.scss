@@ -1,0 +1,31 @@
+/* sidebar */
+.container {
+  width: 25%;
+  margin-top: 1.5rem;
+  display: absolute;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.header {
+  position: fixed;
+  margin-top: 10.5rem;
+  width: 15rem;
+  padding-right: 1rem;
+  border-right: 1px solid;
+}
+
+.title {
+  font-size: 28px;
+  text-align: right;
+  letter-spacing: 0.2rem;
+  display: block;
+}
+
+.description {
+  text-align: right;
+  letter-spacing: 0.1rem;
+  margin-top: 14px;
+  line-height: 1.3rem;
+  display: block;
+}
