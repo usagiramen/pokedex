@@ -3,8 +3,10 @@ import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 
 import * as search from "./search.module.scss"
+import * as entry from "../../templates/metric.module.scss"
 
 export default class Search extends Component {
+  
   constructor(props) {
     super(props)
     this.state = {
@@ -16,24 +18,38 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        <span>What are..</span>
-        <input className={search.bar} type="text" value={this.state.query} onChange={this.search} />
-        <ul>
+        <div className={search.container}>
+          <span>What are</span>
+          <input className={search.bar} type="text" value={this.state.query} onChange={this.search} />
+        </div>
+
+        <div className={entry.container}>
           {this.state.results.map(page => (
-            <li key={page.id}>
-              <Link to={"/" + page.key.replace(' ', '_')}>{page.key}</Link>
-            </li>
+            <div key={page.id}>
+              <Link to={"/" + page.key.replace(' ', '_')}>
+                <h2> &gt; {page.key}</h2>
+              </Link>
+              <p>{page.description}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     )
   }
+
   getOrCreateIndex = () => 
     // create elasticlunr index and hydrate with graphql query.
     this.index? this.index : Index.load(this.props.searchIndex)
 
   search = evt => {
     const query = evt.target.value
+
+    if (query != '') {
+      console.log('not empty');
+    } else {
+      console.log('empty');
+    }
+
     this.index = this.getOrCreateIndex()
 
     this.setState({

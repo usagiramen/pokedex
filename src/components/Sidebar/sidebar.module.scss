@@ -1,7 +1,7 @@
 /* sidebar */
 .container {
   width: 25%;
-  margin-top: 1.5rem;
+  margin-top: 15%;
   display: absolute;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -9,7 +9,6 @@
 
 .header {
   position: fixed;
-  margin-top: 10.5rem;
   width: 15rem;
   padding-right: 1rem;
   border-right: 1px solid;
@@ -26,6 +25,7 @@
   text-align: right;
   letter-spacing: 0.1rem;
   margin-top: 14px;
+  margin-bottom: 14px;
   line-height: 1.3rem;
   display: block;
 }

@@ -29,11 +29,10 @@ h2 {
   -webkit-font-smoothing: antialiased;
 }
 
-p {
+p, span {
   letter-spacing: 0.05rem;
   margin-top: 14px;
   line-height: 1.3rem;
-  display: block;
 }
 
 .wrap {
@@ -57,7 +56,7 @@ p {
 .maincontainer {
   width: 50%;
   height: 100%;
-  margin-top: 10.5rem;
+  margin-top: 18%;
   position: relative;
   display: -webkit-flex;
   display: flex;
